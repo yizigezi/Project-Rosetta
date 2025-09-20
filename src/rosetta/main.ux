@@ -1,0 +1,30 @@
+<template>
+    <div class="mainView" show="{{show}}">
+        <div style="background-color: #000000">
+            
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        show: {
+            default: false
+        },
+        method: {
+            default: 'chn_9_pinyin'
+        }
+    },
+    data: {
+        supported_methods: ['chn_9_pinyin', 'chn_26_pinyin', 'eng_26_qwerty', 'num_signs'],
+        current_page: 'keyboard',
+        current_method: this.method,
+        internal_pages: ['settings', 'keyboard', 'candidate_words']
+    }
+};
+</script>
+
+<style lang="less">
+@import './style/page.less';
+</style>
