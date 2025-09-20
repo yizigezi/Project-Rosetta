@@ -1,8 +1,12 @@
+<import name="rosetta" src="../../rosetta/main.ux"></import>
+<import src="../../components/InputMethod/InputMethod.ux" name="InputMethod"></import>
 <template>
   <div class="demo-page">
     <text class="title">{{ $t("a.b") }},欢迎打开{{ title }}</text>
     <!-- 点击跳转详情页 -->
     <input class="btn" type="button" value="跳转到详情页" onclick="routeDetail" />
+    <rosetta show="{{true}}"></rosetta>
+    <!-- <InputMethod hide="{{false}}"></InputMethod> -->
   </div>
 </template>
 

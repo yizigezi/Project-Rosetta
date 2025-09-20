@@ -1,27 +1,28 @@
 <template>
     <div class="mainView" show="{{show}}">
-        <div style="background-color: #000000">
-            
-        </div>
+        <text style="color: #FFFFFF; font-size: 20px;">当前输入法页面: {{current_page}}</text>
     </div>
 </template>
 
 <script>
+const internal_pages = ['settings', 'keyboard', 'candidate_words']
+const supported_methods = ['chn_9_pinyin', 'chn_26_pinyin', 'eng_26_qwerty', 'num_signs'];
 export default {
     props: {
         show: {
-            default: false
+            default: true
         },
         method: {
             default: 'chn_9_pinyin'
         }
     },
     data: {
-        supported_methods: ['chn_9_pinyin', 'chn_26_pinyin', 'eng_26_qwerty', 'num_signs'],
         current_page: 'keyboard',
-        current_method: this.method,
-        internal_pages: ['settings', 'keyboard', 'candidate_words']
-    }
+        current_method: ''
+    },
+    onInit() {
+        console.log('InputMethod onInit');
+    },
 };
 </script>
 

@@ -9,10 +9,16 @@
     "watch"
   ],
   "features": [
-    {
-      "name": "system.router"
-    }
-  ],
+	{
+		"name": "system.router"
+	},
+	{
+		"name": "system.device"
+	},
+	{
+		"name": "system.vibrator"
+	}
+],
   "config": {
     "logLevel": "log",
     "designWidth": "466"
